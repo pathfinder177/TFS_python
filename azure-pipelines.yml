@@ -29,6 +29,5 @@ strategy:
 
 steps:
 
-- ${{ each parameter in parameters.dictOfStrings }}
-#  - script: echo ${{ parameter.Key }} 
+- ${{ each parameter in parameters }}
   - script: echo ${{ parameter.Value }}
