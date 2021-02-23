@@ -28,7 +28,7 @@ strategy:
       python.version: '3.7'
 
 steps:
-- script: echo ${{ var.key }} ${{ var.value }}
+- script: echo env
   env:
     ${{ each var in parameters.environment }}:
       ${{ var.key }}: ${{ var.value }}
