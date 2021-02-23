@@ -30,5 +30,5 @@ strategy:
 steps:
 
 - ${{ each parameter in parameters.dictOfStrings }}
-  - script: echo ${{ parameter.Key }} 
+#  - script: echo ${{ parameter.Key }} 
   - script: echo ${{ parameter.Value }}
