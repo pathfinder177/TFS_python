@@ -30,5 +30,5 @@ strategy:
 steps:
 - script: echo env
   env:
-    ${{ each var in parameters.environment }}:
+    ${{ each var in parameters.dictOfStrings }}:
       ${{ var.key }}: ${{ var.value }}
