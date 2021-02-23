@@ -6,7 +6,7 @@
 parameters:
 - name: dictOfStrings
   type: object
-  values:
+  default:
     host: prodhost.com:8000/?devops=1
     dbmode: readAhead
     userconnection: onDemand
