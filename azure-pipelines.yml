@@ -28,6 +28,5 @@ strategy:
       python.version: '3.7'
 
 steps:
-
-- ${{ each parameter in parameters }}
-  - script: echo ${{ parameter.Value }}
+- ${{ each var in parameters.dictOfStrings }}
+  - script: echo ${{ var.value }}
