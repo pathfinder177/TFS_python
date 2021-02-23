@@ -3,10 +3,10 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
-variables:
+parameters:
 - name: dictOfStrings
   type: object
-  value:
+  default:
     host: prodhost.com:8000/?devops=1
     dbmode: readAhead
     userconnection: onDemand
@@ -43,5 +43,5 @@ steps:
     pytest
   displayName: 'pytest'
 
-- ${{ each value in parameters.dictOfStrings }}
-  - script: echo ${{ value }}
+- ${{ each parameter in parameters.dictOfStrings }}
+  - script: echo ${{ parameter.Key }} ${{ parameter.Value }}
